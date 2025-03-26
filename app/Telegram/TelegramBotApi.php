@@ -11,7 +11,7 @@ final class TelegramBotApi
 {
     private const HOST = 'https://api.telegram.org/bot';
 
-    public static function sendMessage(string $token, int $chatId, string $text): void
+    public static function p(string $token, int $chatId, string $text): void
     {
         try {
             $response = Http::get(self::HOST.$token.'/sendMessage', [
