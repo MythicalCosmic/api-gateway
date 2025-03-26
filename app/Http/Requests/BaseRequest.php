@@ -37,37 +37,38 @@ abstract class BaseRequest extends FormRequest implements ValidationContract
     protected function defaultMessages(): array
     {
         return [
-            'required' => 'Поле :attribute обязательно для заполнения',
-            'string' => 'Поле :attribute должно быть строкой',
-            'integer' => 'Поле :attribute должно быть целым числом',
-            'numeric' => 'Поле :attribute должно быть числом',
-            'array' => 'Поле :attribute должно быть массивом',
-            'email' => 'Поле :attribute должно быть действительным email адресом',
-            'unique' => 'Такое значение поля :attribute уже существует',
-            'exists' => 'Выбранное значение для :attribute некорректно',
+            'required' => 'The :attribute field is required.',
+            'string' => 'The :attribute field must be a string.',
+            'integer' => 'The :attribute field must be an integer.',
+            'numeric' => 'The :attribute field must be a number.',
+            'array' => 'The :attribute field must be an array.',
+            'email' => 'The :attribute field must be a valid email address.',
+            'unique' => 'The :attribute field value already exists.',
+            'exists' => 'The selected :attribute value is invalid.',
             'max' => [
-                'numeric' => 'Поле :attribute не может быть больше :max',
-                'string' => 'Поле :attribute не может быть больше :max символов',
-                'array' => 'Поле :attribute не может содержать больше :max элементов',
+                'numeric' => 'The :attribute field may not be greater than :max.',
+                'string' => 'The :attribute field may not be greater than :max characters.',
+                'array' => 'The :attribute field may not contain more than :max items.',
             ],
             'min' => [
-                'numeric' => 'Поле :attribute должно быть не менее :min',
-                'string' => 'Поле :attribute должно содержать не менее :min символов',
-                'array' => 'Поле :attribute должно содержать не менее :min элементов',
+                'numeric' => 'The :attribute field must be at least :min.',
+                'string' => 'The :attribute field must be at least :min characters.',
+                'array' => 'The :attribute field must contain at least :min items.',
             ],
-            'in' => 'Выбранное значение для :attribute ошибочно',
-            'date' => 'Поле :attribute не является датой',
-            'date_format' => 'Поле :attribute не соответствует формату :format',
-            'boolean' => 'Поле :attribute должно быть логическим значением',
-            'confirmed' => 'Поле :attribute не совпадает с подтверждением',
+            'in' => 'The selected :attribute value is invalid.',
+            'date' => 'The :attribute field is not a valid date.',
+            'date_format' => 'The :attribute field does not match the format :format.',
+            'boolean' => 'The :attribute field must be a boolean.',
+            'confirmed' => 'The :attribute field confirmation does not match.',
             'size' => [
-                'numeric' => 'Поле :attribute должно быть равным :size',
-                'file' => 'Размер файла в поле :attribute должен быть равен :size Кб',
-                'string' => 'Количество символов в поле :attribute должно быть равным :size',
-                'array' => 'Количество элементов в поле :attribute должно быть равным :size',
+                'numeric' => 'The :attribute field must be :size.',
+                'file' => 'The file size in the :attribute field must be :size KB.',
+                'string' => 'The :attribute field must be :size characters.',
+                'array' => 'The :attribute field must contain :size items.',
             ],
         ];
     }
+
 
     /**
      * Custom validation messages.

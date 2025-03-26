@@ -163,38 +163,38 @@ class UserRequest extends BaseRequest
     public function attributes(): array
     {
         return [
-            'name' => 'Имя',
-            'username' => 'Имя пользователя',
-            'password' => 'Пароль',
-            'roles' => 'Роли',
-            'roles.*' => 'Роль',
-            'status' => 'Статус',
-            'search' => 'Поиск',
-            'orderBy' => 'Сортировка по',
-            'sortedBy' => 'Направление сортировки',
-            'per_page' => 'Количество записей на странице',
-            'filter.name' => 'Фильтр по имени',
-            'filter.username' => 'Фильтр по имени пользователя',
-            'filter.role' => 'Фильтр по роли',
-            'filter.status' => 'Фильтр по статусу',
-            'force' => 'Принудительное удаление',
+            'name' => 'Name',
+            'username' => 'Username',
+            'password' => 'Password',
+            'roles' => 'Roles',
+            'roles.*' => 'Role',
+            'status' => 'Status',
+            'search' => 'Search',
+            'orderBy' => 'Sort by',
+            'sortedBy' => 'Sort direction',
+            'per_page' => 'Records per page',
+            'filter.name' => 'Filter by name',
+            'filter.username' => 'Filter by username',
+            'filter.role' => 'Filter by role',
+            'filter.status' => 'Filter by status',
+            'force' => 'Force delete',
         ];
     }
-
+    
     /**
      * Get custom validation messages.
      */
     public function messages(): array
     {
         return [
-            'name.required' => ':attribute обязательно для заполнения.',
-            'username.required' => ':attribute обязательно для заполнения.',
-            'username.unique' => ':attribute уже занято.',
-            'password.required' => ':attribute обязателен для заполнения.',
-            'password.min' => ':attribute должен содержать минимум 3 символов.',
-            'roles.required' => ':attribute обязательны для заполнения.',
-            'roles.min' => 'Необходимо указать хотя бы одну :attribute.',
-            'roles.*.exists' => 'Указанная :attribute не существует.',
+            'name.required' => ':attribute is required.',
+            'username.required' => ':attribute is required.',
+            'username.unique' => ':attribute is already taken.',
+            'password.required' => ':attribute is required.',
+            'password.min' => ':attribute must be at least 3 characters long.',
+            'roles.required' => ':attribute are required.',
+            'roles.min' => 'At least one :attribute must be specified.',
+            'roles.*.exists' => 'The specified :attribute does not exist.',
         ];
     }
-}
+}    

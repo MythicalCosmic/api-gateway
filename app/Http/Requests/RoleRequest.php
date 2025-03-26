@@ -131,30 +131,31 @@ class RoleRequest extends BaseRequest
      * Get custom attribute names for validation errors.
      */
     public function attributes(): array
-    {
-        return [
-            'name' => 'Имя',
-            'username' => 'Имя пользователя',
-            'permissions' => 'Разрешении',
-            'permissions.*' => 'Разрешения',
-            'search' => 'Поиск',
-            'orderBy' => 'Сортировка по',
-            'sortedBy' => 'Направление сортировки',
-            'per_page' => 'Количество записей на странице',
-            'force' => 'Принудительное удаление',
-        ];
-    }
+{
+    return [
+        'name' => 'Name',
+        'username' => 'Username',
+        'permissions' => 'Permissions',
+        'permissions.*' => 'Permission',
+        'search' => 'Search',
+        'orderBy' => 'Sort by',
+        'sortedBy' => 'Sort direction',
+        'per_page' => 'Records per page',
+        'force' => 'Force delete',
+    ];
+}
 
-    /**
-     * Get custom validation messages.
-     */
-    public function messages(): array
-    {
-        return [
-            'name.required' => ':attribute обязательно для заполнения.',
-            'permissions.required' => ':attribute обязательны для заполнения.',
-            'permissions.min' => 'Необходимо указать хотя бы одну :attribute.',
-            'permissions.*.exists' => 'Указанная :attribute не существует.',
-        ];
-    }
+/**
+ * Get custom validation messages.
+ */
+public function messages(): array
+{
+    return [
+        'name.required' => ':attribute is required.',
+        'permissions.required' => ':attribute are required.',
+        'permissions.min' => 'At least one :attribute must be specified.',
+        'permissions.*.exists' => 'The specified :attribute does not exist.',
+    ];
+}
+
 }
