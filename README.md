@@ -1,4 +1,4 @@
-# [Project Name]
+# [api-gateway]
 
 > Enterprise-grade Laravel application with Clean Architecture and SOLID principles
 
